@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   only_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/19 16:54:46 by ldevelle          #+#    #+#             */
-/*   Updated: 2018/09/20 20:07:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2018/08/31 18:10:13 by exam              #+#    #+#             */
+/*   Updated: 2018/08/31 18:25:42 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void(*f)(int))
+#include <unistd.h>
+
+void only_a(void)
 {
-	int i;
+	char a;
+	a = 'a';
+	write(1 , &a , 1 );
+}
 
-	i = 0;
-	while (i < length)
-		f(tab[i++]);
-
+int main()
+{
+	only_a();
+	return(0);
 }

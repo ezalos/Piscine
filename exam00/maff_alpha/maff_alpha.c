@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   maff_alpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/19 16:54:46 by ldevelle          #+#    #+#             */
-/*   Updated: 2018/09/20 20:07:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2018/08/31 18:47:57 by exam              #+#    #+#             */
+/*   Updated: 2018/08/31 18:57:18 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void(*f)(int))
+#include <unistd.h>
+
+void maff_alpha(void)
 {
-	int i;
+int a = 'a';
+int b = 'B';
 
-	i = 0;
-	while (i < length)
-		f(tab[i++]);
+while(b <= 'Z')
+	{
+		write(1,&a,1);
+		write(1,&b,1);
+		a = a+2;
+		b = b+2;
+	}
+		write(1,"\n",1);
+}
 
+int main()
+{
+	maff_alpha();
+	return(0);
 }

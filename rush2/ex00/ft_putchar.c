@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/19 16:54:46 by ldevelle          #+#    #+#             */
-/*   Updated: 2018/09/20 20:07:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2018/09/01 18:50:41 by ldevelle          #+#    #+#             */
+/*   Updated: 2018/09/01 18:55:00 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void(*f)(int))
+#include <unistd.h>
+
+int		ft_putchar(char lettre)
 {
-	int i;
-
-	i = 0;
-	while (i < length)
-		f(tab[i++]);
-
+	write(1, &lettre, 1);
+	return (0);
 }
